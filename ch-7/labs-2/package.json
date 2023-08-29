@@ -1,0 +1,16 @@
+{
+  "name": "labs-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "import-meta-resolve": "3.0.0"
+  }
+}
