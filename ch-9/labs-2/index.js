@@ -1,8 +1,17 @@
-'use strict'
-const { EventEmitter } = require('events')
+/* Without removing any of the existing code, and without using a try/catch
+block add some code which stops the process from crashing.
+When implemented correctly the process should output passed!
+*/
 
-process.nextTick(console.log, 'passed!')
+'use strict';
+const { EventEmitter } = require('events');
+const { nextTick } = require('process');
 
-const ee = new EventEmitter()
+process.nextTick(console.log, 'passed!');
 
-ee.emit('error', Error('timeout'))
+const ee = new EventEmitter();
+
+//added this line, as "To add a listener to an event emitter the addListener method or it's alias on method is used"
+ee.on('error', () => {});
+
+ee.emit('error', Error('timeout'));
