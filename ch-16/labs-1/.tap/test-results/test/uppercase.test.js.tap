@@ -1,0 +1,76 @@
+TAP version 14
+# Subtest: Uppercase function should convert a string to uppercase
+    1..1
+    ok 1 - Should convert "hello" to "HELLO"
+ok 1 - Uppercase function should convert a string to uppercase # time=2.595ms
+
+# Subtest: Uppercase function should throw an error for non-string input
+    1..2
+    not ok 1 - Should throw an error for non-string input
+      ---
+      diff: |
+        --- expected
+        +++ actual
+        @@ -1,1 +1,1 @@
+        -/input must be a string/
+        +"str.toUpperCase is not a function"
+      at:
+        fileName: test/uppercase.test.js
+        lineNumber: 14
+        columnNumber: 5
+        typeName: Test
+      stack: |
+        Test.<anonymous> (test/uppercase.test.js:14:5)
+        Object.<anonymous> (test/uppercase.test.js:11:1)
+        Function.all
+      source: >2
+          t.plan(2); // We expect two assertions
+      
+          t.throws(() => uppercase(42), /input must be a string/, 'Should throw an error for non-string input');
+        ----^
+          t.throws(() => uppercase(null), /input must be a string/, 'Should throw an error for null input');
+        });
+      ...
+    
+    not ok 2 - Should throw an error for null input
+      ---
+      diff: |
+        --- expected
+        +++ actual
+        @@ -1,1 +1,1 @@
+        -/input must be a string/
+        +"Cannot read properties of null (reading 'toUpperCase')"
+      at:
+        fileName: test/uppercase.test.js
+        lineNumber: 15
+        columnNumber: 5
+        typeName: Test
+      stack: |
+        Test.<anonymous> (test/uppercase.test.js:15:5)
+        Object.<anonymous> (test/uppercase.test.js:11:1)
+        Function.all
+      source: >2
+      
+          t.throws(() => uppercase(42), /input must be a string/, 'Should throw an error for non-string input');
+          t.throws(() => uppercase(null), /input must be a string/, 'Should throw an error for null input');
+        ----^
+      
+        });
+      ...
+    
+not ok 2 - Uppercase function should throw an error for non-string input # time=58.63ms
+  ---
+  at:
+    fileName: test/uppercase.test.js
+    lineNumber: 11
+    columnNumber: 1
+    typeName: Object
+  source: |
+    });
+  
+    test('Uppercase function should throw an error for non-string input', (t) => {
+    ^
+      t.plan(2); // We expect two assertions
+  ...
+
+1..2

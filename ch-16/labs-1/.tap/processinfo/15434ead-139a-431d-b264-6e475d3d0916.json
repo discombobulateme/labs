@@ -1,0 +1,30 @@
+{
+  "date": "2023-09-15T18:06:39.700Z",
+  "argv": [
+    "/Users/palomaoliveira/.nvm/versions/node/v18.9.0/bin/node",
+    "/Users/palomaoliveira/Documents/learning/node/node-certification-lfw211/labs/ch-16/labs-1/test/uppercase.test.js"
+  ],
+  "execArgv": [
+    "--loader=ts-node/esm",
+    "--loader=@tapjs/mock/loader",
+    "--no-warnings=ExperimentalLoader",
+    "--enable-source-maps",
+    "--loader=@tapjs/processinfo/loader"
+  ],
+  "NODE_OPTIONS": "\"--loader=file:///Users/palomaoliveira/Documents/learning/node/node-certification-lfw211/labs/ch-16/labs-1/node_modules/@tapjs/processinfo/dist/mjs/loader-legacy.mjs\" \"--no-warnings\"",
+  "cwd": "/Users/palomaoliveira/Documents/learning/node/node-certification-lfw211/labs/ch-16/labs-1",
+  "pid": 16949,
+  "ppid": 16947,
+  "parent": null,
+  "uuid": "15434ead-139a-431d-b264-6e475d3d0916",
+  "files": [
+    "/Users/palomaoliveira/Documents/learning/node/node-certification-lfw211/labs/ch-16/labs-1/test/uppercase.test.js",
+    "/Users/palomaoliveira/Documents/learning/node/node-certification-lfw211/labs/ch-16/labs-1/uppercase.js"
+  ],
+  "sources": {},
+  "root": "15434ead-139a-431d-b264-6e475d3d0916",
+  "externalID": "test/uppercase.test.js",
+  "code": 1,
+  "signal": null,
+  "runtime": 260.428375
+}
